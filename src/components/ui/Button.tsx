@@ -8,7 +8,7 @@ const buttonVariants = cva(
     {
         variants: {
             variant: {
-                default: 'bg-slate-900',
+                default: 'bg-primary text-primary-foreground rounded-md',
                 outline: 'border-2 border-primary rounded-lg',
                 danger: 'bg-white border-2 border-danger rounded-lg',
                 success: 'bg-white border-2 border-success rounded-lg',

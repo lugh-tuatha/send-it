@@ -4,13 +4,10 @@ import "./globals.css";
 
 import { 
     ClerkProvider,
-    SignInButton,
-    SignedIn,
-    SignedOut,
-    UserButton
 } from "@clerk/nextjs";
-import Link from "next/link";
+
 import TanstackProvider from "@/components/providers/TanstackProvider";
+import Header from "@/components/layouts/header/Header";
 
 const geistSans = Geist({
     variable: "--font-geist-sans",
@@ -36,14 +33,11 @@ export default function RootLayout({
         <ClerkProvider>
             <html lang="en">
                 <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-                    <SignedOut>
-                        <Link href="/sign-in">Sign In</Link>
-                    </SignedOut>
-                    <SignedIn>
-                        <UserButton />
-                    </SignedIn>
+                    <Header />
                     <TanstackProvider>
-                        {children}
+                        <main className="container">
+                            {children}
+                        </main>
                     </TanstackProvider>
                 </body>
             </html>
