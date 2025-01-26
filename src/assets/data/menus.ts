@@ -3,10 +3,10 @@ import UselessBulb from '@/assets/images/icons/useless-bulb.png'
 import Criticize from '@/assets/images/icons/criticize.png'
 
 export const Menus = [
-    // {
-    //     name: 'Projects',
-    //     href: '/projects',
-    // },
+    {
+        name: 'Projects',
+        href: '/projects',
+    },
     {
         name: 'Send',
         sub_heading : ['Fun'],
