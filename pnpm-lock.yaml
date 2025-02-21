@@ -41,9 +41,6 @@ importers:
       next:
         specifier: 15.1.4
         version: 15.1.4(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
-      prisma:
-        specifier: ^6.2.1
-        version: 6.2.1
       react:
         specifier: ^19.0.0
         version: 19.0.0
@@ -2572,9 +2569,11 @@ snapshots:
     optionalDependencies:
       prisma: 6.2.1
 
-  '@prisma/debug@6.2.1': {}
+  '@prisma/debug@6.2.1':
+    optional: true
 
-  '@prisma/engines-version@6.2.0-14.4123509d24aa4dede1e864b46351bf2790323b69': {}
+  '@prisma/engines-version@6.2.0-14.4123509d24aa4dede1e864b46351bf2790323b69':
+    optional: true
 
   '@prisma/engines@6.2.1':
     dependencies:
@@ -2582,16 +2581,19 @@ snapshots:
       '@prisma/engines-version': 6.2.0-14.4123509d24aa4dede1e864b46351bf2790323b69
       '@prisma/fetch-engine': 6.2.1
       '@prisma/get-platform': 6.2.1
+    optional: true
 
   '@prisma/fetch-engine@6.2.1':
     dependencies:
       '@prisma/debug': 6.2.1
       '@prisma/engines-version': 6.2.0-14.4123509d24aa4dede1e864b46351bf2790323b69
       '@prisma/get-platform': 6.2.1
+    optional: true
 
   '@prisma/get-platform@6.2.1':
     dependencies:
       '@prisma/debug': 6.2.1
+    optional: true
 
   '@rtsao/scc@1.1.0': {}
 
@@ -4283,6 +4285,7 @@ snapshots:
       '@prisma/engines': 6.2.1
     optionalDependencies:
       fsevents: 2.3.3
+    optional: true
 
   prop-types@15.8.1:
     dependencies:
