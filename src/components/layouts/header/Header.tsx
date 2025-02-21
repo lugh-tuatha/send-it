@@ -1,13 +1,10 @@
-"use client"
 import React from 'react'
 import Link from 'next/link'
 
-import { SignedIn, SignedOut, UserButton } from '@clerk/nextjs'
-
 import { Menus } from '@/assets/data/menus'
-import { Button } from '../../ui/Button'
 import DesktopMenu from './DesktopMenu'
 import MobileMenu from './MobileMenu'
+import ClerkSignIn from './ClerkSignIn'
 export default function Header() {
     return (
         <header className='fixed top-0 w-full border-b-2 z-50 border-primary-foreground'>
@@ -23,14 +20,7 @@ export default function Header() {
                 </ul>
                 
                 <div className='flex-center gap-4'>
-                    <SignedOut>
-                        <Link href="/sign-in">
-                            <Button>Sign In</Button>
-                        </Link>
-                    </SignedOut>
-                    <SignedIn>
-                        <UserButton />
-                    </SignedIn>
+                    <ClerkSignIn />
 
                     <div className='lg:hidden'>
                         <MobileMenu menus={Menus}/> 
