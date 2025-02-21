@@ -1,12 +1,27 @@
 "use client"
 import React, { useState } from 'react'
-import Image from 'next/image'
+import Image, { StaticImageData } from 'next/image'
 
 import { ChevronDown, Menu, X } from 'lucide-react'
 import * as motion from "motion/react-client"
 import Link from 'next/link'
 
-export default function MobileMenu({ menus }: { menus: any[] }) {
+type SubMenuProps = {
+    name: string
+    description: string
+    href: string
+    icon: StaticImageData
+}
+
+type MenuProps = {
+    name: string
+    sub_heading?: string[]
+    sub_menu: SubMenuProps[]
+    href: string,
+    grid_cols?: number
+}
+
+export default function MobileMenu({ menus }: { menus: MenuProps[] }) {
     const [isOpen, setIsOpen] = useState(false)
     const [clicked, setClicked] = useState<number | null>(null)
 
@@ -24,10 +39,6 @@ export default function MobileMenu({ menus }: { menus: any[] }) {
             height: 0,
             overflow: 'hidden'
         }
-    }
-
-    const handleLinkClick = () => {
-        setIsOpen(false)
     }
 
     return (
@@ -68,7 +79,7 @@ export default function MobileMenu({ menus }: { menus: any[] }) {
                                     animate={isClicked ? "enter" : "exit"}
                                     variants={subMenuAnimation}
                                     className='ml-5'>
-                                        {sub_menu?.map((item: any) => (
+                                        {sub_menu?.map((item) => (
                                             <li key={item.name}  onClick={() => setIsOpen(false)}>
                                                 <Link href={item.href} className='p-2 flex-center cursor-pointer gap-4'>
                                                     <Image src={item.icon} alt={item.name} width={24} height={24} className='size-6' />

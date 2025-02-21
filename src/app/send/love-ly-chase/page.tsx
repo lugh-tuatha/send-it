@@ -39,7 +39,7 @@ export default function LoveLyChase() {
             const newCount = prevCount + 1;
 
             if (newCount == 3 || newCount == 10) {
-                refetch().then((result) => {
+                refetch().then((result: any) => {
                     if (result){
                         setGifs((prevGifs) => [...prevGifs, result.data.data.images.downsized_medium.url])
                     }

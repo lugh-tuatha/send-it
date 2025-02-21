@@ -4,11 +4,11 @@ import React from 'react'
 import { Quote } from 'lucide-react'
 
 import { Button } from '@/components/ui/Button'
-import { useUselessFact } from '@/features/learn/hooks/use-useless-fact'
+import { useRandomUselessFact } from '@/features/learn/hooks/use-useless-fact'
 import UselessFactSkeleton from '@/features/learn/components/ui/UselessFactSkeleton'
 
-export default function page() {
-    const { data, isLoading, isError, refetch } = useUselessFact();
+export default function UselessFacts() {
+    const { data, isLoading, refetch } = useRandomUselessFact();
 
     return (
         <div className='flex items-center justify-center flex-col gap-4 w-full h-screen'>

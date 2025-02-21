@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const axiosInstance = axios.create({ baseURL: '' })
+// const axiosInstance = axios.create({ baseURL: '' })
 
 export const getRandomGif = async () => {
     try {
