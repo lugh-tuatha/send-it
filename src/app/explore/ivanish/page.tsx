@@ -13,6 +13,7 @@ import IvanHoly from '@/assets/images/profile/ivan-holy.jpg'
 import IvanGraduate from '@/assets/images/profile/ivan-graduate.png'
 import Jonathan from '@/assets/images/profile/jonathan.png'
 import Magno from '@/assets/images/profile/magno.jpg'
+import ChatBubble from "@/features/explore/components/ivanish/ChatBubble";
 
 type secondVoiceProps = {
     name: string,
@@ -89,40 +90,28 @@ export default function Ivanish() {
                                 {chat.input}
                             </div>
 
-                            <div>
-                                <p className="text-sm text-text-600 font-bold ml-14 mb-1">Ivan Tecno</p>
-                                <div className="flex gap-4 items-start">
-                                    <Image src={chat.profile} alt="Ivan Profile" className="rounded-full" width={40} height={40} />
-                                    <div className="px-4 py-2 max-w-2xl rounded-lg bg-text-900 text-white self-start">
-                                        <ReactMarkdown>{chat.message}</ReactMarkdown>
-                                    </div>
-                                </div>
-                            </div>
+                            <ChatBubble
+                                message={chat.message} 
+                                profile={chat.profile} 
+                                name="Ivan Tecno" 
+                            />
 
                             {chat.second_voice != null && (
-                                <div>
-                                    <p className="text-sm text-text-600 font-bold ml-14 mb-1">{chat.second_voice.name}</p>
-                                    <div className="flex gap-4 items-start">
-                                        <Image src={chat.second_voice.profile} alt="Second Voice Profile" className="rounded-full" width={40} height={40} />
-                                        <div className="px-4 py-2 max-w-2xl rounded-lg bg-text-900 text-white self-start">
-                                            <ReactMarkdown>{chat.second_voice.message}</ReactMarkdown>
-                                        </div>
-                                    </div>
-                                </div>
+                                <ChatBubble
+                                    message={chat.second_voice.message} 
+                                    profile={chat.second_voice.profile} 
+                                    name={chat.second_voice.name} 
+                                />
                             )}
                         </div>
                     ))}
 
                     {isThinking && (
-                        <div>
-                            <p className="text-sm text-text-600 font-bold ml-14 mb-1">Ivan Tecno</p>
-                            <div className="flex gap-4 items-start">
-                                <Image src={IvanHoly} alt="Ivan Profile" className="rounded-full" width={40} height={40} />
-                                <div className="px-4 py-2 max-w-2xl rounded-lg bg-text-900 text-white self-start">
-                                    Ivan is thinking...
-                                </div>
-                            </div>
-                        </div>
+                        <ChatBubble
+                            message="Ivan is thinking..."
+                            profile={IvanHoly} 
+                            name="Ivan Tecno"
+                        />
                     )}
                 </div>
             ) : (

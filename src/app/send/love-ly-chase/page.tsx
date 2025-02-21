@@ -21,7 +21,7 @@ export default function LoveLyChase() {
     const [isYesClicked, setIsYesClicked] = useState(false)
     const [gifs, setGifs] = useState<string[]>([])
 
-    const { data: refetch } = useGiphy();
+    const { refetch } = useGiphy();
 
     useEffect(() => {
         preLoadAudio(noButtonSound);
@@ -39,7 +39,8 @@ export default function LoveLyChase() {
             const newCount = prevCount + 1;
 
             if (newCount == 3 || newCount == 10) {
-                refetch().then((result: any) => {
+                refetch().then((result) => {
+                    console.log(result)
                     if (result){
                         setGifs((prevGifs) => [...prevGifs, result.data.data.images.downsized_medium.url])
                     }
