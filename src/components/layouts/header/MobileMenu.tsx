@@ -32,7 +32,7 @@ export default function MobileMenu({ menus }: { menus: any[] }) {
 
     return (
         <div>
-            <button onClick={toggleDrawer} className='z-50 relative'>
+            <button onClick={toggleDrawer} className='flex-center z-50 relative'>
                 {isOpen ? <X /> : <Menu />}
             </button>
 

@@ -126,7 +126,7 @@ export default function Ivanish() {
                     )}
                 </div>
             ) : (
-                <div className="h-[30rem] md:h-[35rem] flex flex-col justify-between">
+                <div className="h-[calc(100vh-12rem)] flex flex-col justify-between">
                     <div className="flex flex-col gap-4 items-center">
                         <div className="flex-center gap-8">
                             <Image src={IvanHoly} alt="Ivan Profile" width={60} height={60} className="rounded-full" />

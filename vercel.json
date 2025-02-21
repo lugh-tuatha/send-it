@@ -13,43 +13,19 @@
       "dest": "/"
     },
     {
-      "src": "/explore/ivanish",
+      "src": "/explore",
       "dest": "/"
     },
     {
-      "src": "/learn/useless-facts",
+      "src": "/explore/(.*)",
       "dest": "/"
     },
     {
-      "src": "/check-in",
+      "src": "/learn/(.*)",
       "dest": "/"
     },
     {
-      "src": "/check-in/(.*)",
-      "dest": "/"
-    },
-    {
-      "src": "/attendance/(.*)",
-      "dest": "/"
-    },
-    {
-      "src": "/upcoming-events",
-      "dest": "/"
-    },
-    {
-      "src": "/summary",
-      "dest": "/"
-    },
-    {
-      "src": "/summary/(.*)",
-      "dest": "/"
-    },
-    {
-      "src": "/reports",
-      "dest": "/"
-    },
-    {
-      "src": "/reports/(.*)",
+      "src": "/send/(.*)",
       "dest": "/"
     }
   ]

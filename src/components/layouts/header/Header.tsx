@@ -20,18 +20,20 @@ export default function Header() {
                         <DesktopMenu key={menu.name} menu={menu} />
                     ))}
                 </ul>
+                
+                <div className='flex-center gap-4'>
+                    <SignedOut>
+                        <Link href="/sign-in">
+                            <Button>Sign In</Button>
+                        </Link>
+                    </SignedOut>
+                    <SignedIn>
+                        <UserButton />
+                    </SignedIn>
 
-                <SignedOut>
-                    <Link href="/sign-in">
-                        <Button>Sign In</Button>
-                    </Link>
-                </SignedOut>
-                <SignedIn>
-                    <UserButton />
-                </SignedIn>
-
-                <div className='lg:hidden'>
-                    <MobileMenu menus={Menus}/> 
+                    <div className='lg:hidden'>
+                        <MobileMenu menus={Menus}/> 
+                    </div>
                 </div>
             </nav>
         </header>

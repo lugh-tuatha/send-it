@@ -16,12 +16,6 @@ export const Menus = [
                 description: 'A playful chase where love always wins.',
                 href: '/send/love-ly-chase',
                 icon: Click
-            },
-            {
-                name: 'Profile Burner',
-                description: 'Roast social profiles with AI humor!',
-                href: '/',
-                icon: Criticize
             }
         ],
         grid_cols: 1,
@@ -50,6 +44,12 @@ export const Menus = [
                 description: 'The AI That’s Basically Ivan',
                 href: '/explore/ivanish',
                 icon: UselessBulb
+            },
+            {
+                name: 'Profile Burner',
+                description: 'Roast social profiles with AI humor!',
+                href: '/explore/profile-burner',
+                icon: Criticize
             }
         ],
         grid_cols: 1,
