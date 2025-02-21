@@ -1,6 +1,6 @@
 "use client"
 
-import React, { use, useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './index.css'
 import Image from 'next/image';
 
@@ -21,7 +21,7 @@ export default function LoveLyChase() {
     const [isYesClicked, setIsYesClicked] = useState(false)
     const [gifs, setGifs] = useState<string[]>([])
 
-    const { data: randomGif, refetch } = useGiphy();
+    const { data: refetch } = useGiphy();
 
     useEffect(() => {
         preLoadAudio(noButtonSound);
@@ -74,7 +74,7 @@ export default function LoveLyChase() {
             
             {isYesClicked ? (
                 <>
-                    <p className='font-meduim text-success'>💃🕺 Let's plan the best date ever. ❤️</p>
+                    <p className='font-meduim text-success'>💃🕺 Let&#39;s plan the best date ever. ❤️</p>
                     <Confetti
                         width={500}
                         height={500}
@@ -84,7 +84,7 @@ export default function LoveLyChase() {
 
             ) : (
                 <p className={`${noClickCount > 0 ? 'opacity-100' : 'opacity-0'} text-text-600`}>
-                    You have tried to pressed <span className='text-danger'>'No'</span> {noClickCount} times.
+                    You have tried to pressed <span className='text-danger'>&#39;No&#39;</span> {noClickCount} times.
                 </p>
             )}
             
@@ -97,7 +97,7 @@ export default function LoveLyChase() {
                         alt='random gif'
                         src={gifs[0]}
                         priority
-                    ></Image>
+                    />
                 )}
 
                 {gifs.length >= 4 && (
@@ -108,7 +108,7 @@ export default function LoveLyChase() {
                         alt='random gif'
                         src={gifs[3]}
                         priority
-                    ></Image>
+                    />
                 )}
             </div>
         </div>

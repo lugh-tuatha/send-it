@@ -1,0 +1,56 @@
+{
+  "routes": [
+    {
+      "src": "/",
+      "dest": "/"
+    },
+    {
+      "src": "/sign-in",
+      "dest": "/"
+    },
+    {
+      "src": "/sign-up",
+      "dest": "/"
+    },
+    {
+      "src": "/explore/ivanish",
+      "dest": "/"
+    },
+    {
+      "src": "/learn/useless-facts",
+      "dest": "/"
+    },
+    {
+      "src": "/check-in",
+      "dest": "/"
+    },
+    {
+      "src": "/check-in/(.*)",
+      "dest": "/"
+    },
+    {
+      "src": "/attendance/(.*)",
+      "dest": "/"
+    },
+    {
+      "src": "/upcoming-events",
+      "dest": "/"
+    },
+    {
+      "src": "/summary",
+      "dest": "/"
+    },
+    {
+      "src": "/summary/(.*)",
+      "dest": "/"
+    },
+    {
+      "src": "/reports",
+      "dest": "/"
+    },
+    {
+      "src": "/reports/(.*)",
+      "dest": "/"
+    }
+  ]
+}

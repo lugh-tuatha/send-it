@@ -41,4 +41,18 @@ export const Menus = [
         grid_cols: 1,
         href: '',
     },
+    {
+        name: 'Explore',
+        sub_heading : ['AI'],
+        sub_menu: [
+            {
+                name: 'I-Vanish',
+                description: 'The AI That’s Basically Ivan',
+                href: '/explore/ivanish',
+                icon: UselessBulb
+            }
+        ],
+        grid_cols: 1,
+        href: '',
+    },
 ]
