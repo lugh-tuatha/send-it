@@ -1,4 +1,4 @@
-// import Click from '@/assets/images/icons/click.png'
+import Click from '@/assets/images/icons/click.png'
 import UselessBulb from '@/assets/images/icons/useless-bulb.png'
 import Criticize from '@/assets/images/icons/criticize.png'
 
@@ -7,20 +7,20 @@ export const Menus = [
     //     name: 'Projects',
     //     href: '/projects',
     // },
-    // {
-    //     name: 'Send',
-    //     sub_heading : ['Fun'],
-    //     sub_menu: [
-    //         {
-    //             name: 'A Love Ly Chase',
-    //             description: 'A playful chase where love always wins.',
-    //             href: '/send/love-ly-chase',
-    //             icon: Click
-    //         }
-    //     ],
-    //     grid_cols: 1,
-    //     href: '',
-    // },
+    {
+        name: 'Send',
+        sub_heading : ['Fun'],
+        sub_menu: [
+            {
+                name: 'A Love Ly Chase',
+                description: 'A playful chase where love always wins.',
+                href: '/send/love-ly-chase',
+                icon: Click
+            }
+        ],
+        grid_cols: 1,
+        href: '',
+    },
     {
         name: 'Learn',
         sub_heading : ['Quirky Knowledge'],
