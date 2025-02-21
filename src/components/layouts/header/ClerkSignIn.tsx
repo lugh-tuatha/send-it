@@ -10,7 +10,7 @@ export default function ClerkSignIn() {
     <>
         <SignedOut>
             <Link href="/sign-in">
-                <Button>Sign In</Button>
+                Sign IN
             </Link>
         </SignedOut>
         <SignedIn>
