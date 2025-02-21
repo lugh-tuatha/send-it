@@ -2,10 +2,9 @@
 import { useState } from "react";
 import Image, { StaticImageData } from 'next/image'
 import './index.css'
-import ReactMarkdown from "react-markdown";
 
 import { SendHorizontal } from "lucide-react";
-import { useGeminiAi } from "@/features/explore/hooks/use-gemini-ai";
+import { useGeminiAi } from "@/hooks/use-gemini-ai";
 import TextareaAutosize from 'react-textarea-autosize';
 
 import IvanTecno from '@/assets/images/profile/ivanish.jpg'
@@ -124,6 +123,7 @@ export default function Ivanish() {
 
                         <p className="text-text-600">Now you see me, now you don&#39;t.</p>
                     </div>
+                    
                     <div className="space-y-2">
                         <h1 className="text-text-600 font-bold">Suggested Prompt</h1>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">
@@ -132,14 +132,14 @@ export default function Ivanish() {
                                 onClick={() => handleGenerate("What is bigger, 9.9 or 9.11")}
                             >
                                 <p>What is bigger, 9.9 or 9.11?</p>
-                                <SendHorizontal className="cursor-pointer"/>
+                                <SendHorizontal />
                             </div>
                             <div
                                 className="p-4 flex-center justify-between gap-4 border-2 border-primary rounded-lg bg-white cursor-pointer"
                                 onClick={() => handleGenerate("Tell me about aliens invading Earth")}
                             >
                                 <p>Tell me about aliens invading Earth</p>
-                                <SendHorizontal className="cursor-pointer"/>
+                                <SendHorizontal />
                             </div>
                         </div>
                     </div>
