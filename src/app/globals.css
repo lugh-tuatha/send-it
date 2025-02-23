@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --background: #EFFDFF;
+    --foreground: #171717;
+    --primary: #081F4B;
+    --primary-foreground: #C2CFD6;
+    --secondary: #94BEDC;
+    --accent: #FF6882;
+    --text-900: #0B161E;    
+    --text-600: #365261;
+    --danger: #FF4B4B;
+    --success: #3DBE81;
+    --primary-shadow: 0 0 5px var(--primary);
+}
+
+body {
+    color: var(--foreground);
+    background: var(--background);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body::-webkit-scrollbar {
+    width: .3em;
+}
+
+body::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--primary);
+    outline: 1px solid slategrey;
+}
+
+@layer components {
+    .sub-menu {
+        @apply absolute top-[4.5rem] p-4 rounded-md origin-[50%_-170px] backdrop:blur bg-secondary;
+    }
+
+    .page-title {
+        @apply text-xl font-bold text-primary;
+    }
+}
+/* Utilities Styles */
+@layer utilities {
+    .flex-center {
+        @apply flex items-center;
+    }
+
+    .flex-center-between {
+        @apply flex items-center justify-between;
+    }
+}

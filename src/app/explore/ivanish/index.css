@@ -1,0 +1,32 @@
+code {
+    background-color: #f0f0f0;
+    color: var(--text-600);
+    padding: 2px 4px;
+    border-radius: .25rem;
+}
+
+pre {
+    background-color: #f0f0f0;
+    color: var(--text-600);
+    padding: 10px;
+    border-radius: 4px;
+    overflow-x: auto;
+}
+
+.chats-container {
+    overflow-y: scroll;
+    height: calc(100vh - 12rem);
+}
+
+.chats-container::-webkit-scrollbar {
+    width: .3em;
+}
+
+.chats-container::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.chats-container::-webkit-scrollbar-thumb {
+    background-color: var(--primary);
+    outline: 1px solid slategrey;
+}
